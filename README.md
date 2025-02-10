@@ -151,6 +151,8 @@ https://github.com/user-attachments/assets/bcd504ea-1e62-411a-b104-0d0e9a10f343
         - Ctrl + Shift + P(명령 팔레트)에서 시작
             - Create: 새 Juoyter 노트북 클릭
             - 무조건 저장 먼저
+        - GUI 학습에는 불합리
+        - 빅데이터 분석, 머신러닝, 딥러닝 많이 활용
 
     - GUI 학습(tkinter)
         - GUI(Grapic User Iterface) - 그래픽 사용자 인터페이스
@@ -170,6 +172,25 @@ https://github.com/user-attachments/assets/bcd504ea-1e62-411a-b104-0d0e9a10f343
             - 안드로이드, iOS 모바일 앱 UI로 사용가능
             - 모바일특화로 멀티플랫폼 지원
             - 가장 어렵다
+
+    - Tkinter 학습
+        - 기본 템플릿
+
+        ```python
+        from tkinter import *
+        root = Tk()
+        # 이사이에 위젯, 이벤트 등 작성
+        # Lable, Button, Entry, Radiobutton
+        # Checkbutton, Listbox, Frame 등...
+        # 위젯.pack() 필수!
+        root.mainloop()
+        ```
+<!-- 주석 -->
+<!-- html에서 사용하는 <img>태그로 캡처한 이미지를 추가 -->
+![py001](./image.py001.png)
+<img src="./image/py001.png"width="400">
+
+
 
 
 ```python
