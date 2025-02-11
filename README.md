@@ -197,6 +197,12 @@ https://github.com/user-attachments/assets/bcd504ea-1e62-411a-b104-0d0e9a10f343
         - ChatGPT 유사 앱 - 구글 제미나이 API
     - 실습
         - 제미나이 챗앱 -> **클래스형태**로 변경
+
+
+
+https://github.com/user-attachments/assets/ad487fbe-3ea1-4d4c-8733-89eb8e5a00ba
+
+
         
 - 파이썬 응용
     - 실행파일 만들기
