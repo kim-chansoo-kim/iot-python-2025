@@ -197,14 +197,16 @@ https://github.com/user-attachments/assets/bcd504ea-1e62-411a-b104-0d0e9a10f343
         - ChatGPT 유사 앱 - 구글 제미나이 API
     - 실습
         - 제미나이 챗앱 -> **클래스형태**로 변경
-
+        
+- 파이썬 응용
     - 실행파일 만들기
         - `pyinstaller` 모듈 설치
-        - > pip installer pyinstaller
-        - > pyinstaller --onefile .\day07\py01_gpt_clone.py
-        - 같이 실행되는 터미널을 제거하려면
-        - > pyinstaller --onefile --noconsole .\day07\py01_gpt_clone.py (파이썬 파일명)
-        - 아이콘등의 리소스를 dist 폴더에 복사해야
+            - pip installer pyinstaller
+        - 실행파일 명령어(터미널에서 실행)
+            - pyinstaller --onefile .\day07\py01_gpt_clone.py
+            - 같이 실행되는 터미널을 제거하려면
+            -  pyinstaller --onefile --noconsole .\day07\py01_gpt_clone.py (파이썬 파일명)
+            - 아이콘등의 리소스를 dist 폴더에 복사해야
 
 
 
