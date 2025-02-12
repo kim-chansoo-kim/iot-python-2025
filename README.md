@@ -224,8 +224,11 @@ https://github.com/user-attachments/assets/ad487fbe-3ea1-4d4c-8733-89eb8e5a00ba
 
     - 토이프로젝트
         - 블럭깨기 게임
-        - 공의 x축 변화 : $x = r \cdot \cos \theta$
-        - 공의 y축 변화 : $y = r \cdot \sin \theta$
+        - 공의 위치에 대한 수식
+            - x축 방향 계산방법 : $x = r \cdot \cos \theta$
+            - y축 방향 계산방법 : $y = r \cdot \sin \theta$
+        - 공의 시작방향, 경계부분 문제 해결, 종료 후 다시 시작 로직
+<!-- && y = r \cdot \sin \theta $$ -->
 
 
 https://github.com/user-attachments/assets/e296bcb3-9114-4fe1-af8a-af98477c8e2d
