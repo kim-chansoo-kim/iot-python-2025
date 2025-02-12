@@ -6,7 +6,7 @@ from tkinter.font import *
 
 import google.generativeai as genai
 
-class molra(Tk):
+class py02(Tk):
     
     def __init__(self):
         super().__init__()
@@ -69,5 +69,5 @@ class molra(Tk):
                 self.textResult.see(END) # 스크롤텍스트 마지막위치로 스크롤 다운
 
 
-app = molra()
+app = py02()
 app.mainloop()
