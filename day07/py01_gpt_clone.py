@@ -10,7 +10,7 @@ import google.generativeai as genai
 
 
 # 6. 제미나이 API용 구성
-genai.configure(api_key='') # 신청한 API키
+genai.configure(api_key='AIzaSyAmkFtDDvdV0Qsm9A-i2UHCEadJALl3-XU') # 신청한 API키
 model = genai.GenerativeModel('gemini-1.5-flash') # 사전훈련된 AI 모델
 
 # 4. 전송버튼 이벤트, 제미나이 실행
