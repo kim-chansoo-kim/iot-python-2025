@@ -14,15 +14,17 @@ class Block:
         self.col = col
         self.rect = rect
         self.speed = speed
-        self.dir = random.randint(-45, 45) + 270 # 최소값 225 ~ 최대값 315
+        self.dir = random.randint(-45, 45) + 90 # 90이면 위로, 270이면 공이 아래로 -45~45 편차로
 
     def move(self): # 볼 무브
     # 볼이 움직이는 x축 값을 계속 계산하려면 x축은 dir 값을 라이언으로 변환 후 코사인 처리
         self.rect.centerx += math.cos(math.radians(self.dir)) * self.speed
     # 볼이 움직이는 y축 값을 계속 계산하려면 y축은 dir 값을 라이언으로 변환 후 사인 처리
         self.rect.centery -= math.sin(math.radians(self.dir)) * self.speed
+
     # 타원--------------------------------------------------------------------------
     def draw_E(self): # 공을 circle이 아니라 ellipse로 생성한 이유
+
         pygame.draw.ellipse(Surface, self.col, self.rect)
     # 사각형------------------------------------------------------------------------
     def draw_R(self):
@@ -45,10 +47,12 @@ def main():
     # 무지개색 정보------------------------------------------------------------------
     colors = [(255,0,0), (255,150,0), (255,228,0), (11,201,4), 
               (0,80,255), (0,0,147), (201,0,167)]
+    
     # 초기에 생성될 블럭들(무지개색으로 아홉개씩, 54개 블럭)-------------------------
     for y, color in enumerate(colors, start=0): # y값은 0 ~ 6
             for x in range(0, 9):
                 BLOCK.append(Block(color, Rect(x*80 + 150, y*40 + 40, 60, 20)))
+
     # -------------------------------------------------------------------------------
     bigFont = pygame.font.SysFont('NanumGothic', 80)
     smallFont = pygame.font.SysFont('NanumGothic', 45)
@@ -57,7 +61,9 @@ def main():
     M_CLEAR = bigFont.render('CLEAR!!', True, 'yellow')
     M_FAIL = bigFont.render('YOU DIED', True, 'red')
     # -------------------------------------------------------------------------------
+
     while True:
+
     # 스코어, 스피드 글자------------------------------------------------------------
         M_SCORE = smallFont.render(f'SCORE : {score}', True, 'white')
         M_SPEED = smallFont.render(f'SPEED : {BALL.speed}', True, 'white')
@@ -79,6 +85,7 @@ def main():
                         PADDLE.rect.centerx += 10
                 elif event.key == K_SPACE:
                     is_game_start = True # 게임시작
+
     # 게임화면 렌더링-----------------------------------------------------------------
         if is_game_start == False:
             Surface.blit(M_GAME_TITLE, ((SCREEN_WIDTH / 2) - (400 / 2), 
@@ -120,8 +127,9 @@ def main():
             if BALL.rect.centery > 800:
                 Surface.blit(M_FAIL, ((SCREEN_WIDTH / 2) - (280 / 2), 
                                         (SCREEN_HEIGHT / 2) - (50 / 2)))
-                # is_game_start = False 게임 종료 후 재시작은 나중에 다시!!
-
+                is_game_start = False # 게임 종료 후 재시작은 나중에 다시!!
+                BALL = Block((200, 200, 0), Rect(375, 650, 20, 20), 10) # 공을 새로 생성
+    # 페달 볼 그리기------------------------------------------------------------------
             PADDLE.draw_R()
             BALL.draw_E()
             for i in BLOCK: # Block()
