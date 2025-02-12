@@ -224,8 +224,7 @@ https://github.com/user-attachments/assets/ad487fbe-3ea1-4d4c-8733-89eb8e5a00ba
 
     - 토이프로젝트
         - 블럭깨기 게임
-        - 공의 x축 방향 계산방법 : $x = r \cdot \cos \theta$
-        - 공의 y축 방향 계산방법 : $y = r \cdot \sin \theta$
+
 
 
 https://github.com/user-attachments/assets/e296bcb3-9114-4fe1-af8a-af98477c8e2d
